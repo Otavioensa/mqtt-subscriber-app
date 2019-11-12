@@ -1,0 +1,23 @@
+{
+  "name": "mqtt-pub-client-server",
+  "version": "1.0.0",
+  "description": "Client subscriber application that will listen to a MQTT broker and log incoming data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Otavioensa/mqtt-pub-client-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Otavioensa/mqtt-pub-client-server/issues"
+  },
+  "homepage": "https://github.com/Otavioensa/mqtt-pub-client-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mqtt": "^3.0.0"
+  }
+}

@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Otavioensa/mqtt-pub-client-server#readme",
   "dependencies": {
-    "express": "^4.17.1",
     "mqtt": "^3.0.0"
   }
 }

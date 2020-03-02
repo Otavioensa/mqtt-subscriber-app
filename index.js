@@ -1,9 +1,5 @@
-const http = require('http')
-const express = require('express')
 const mqtt = require('mqtt')
-const { port, broker, topic } = require('./config')
-
-const app = express()
+const { broker, topic } = require('./config')
 
 const onConnect = () => {
   console.log('connected')
@@ -18,6 +14,3 @@ const onMessage = (topic, message) => {
 const mqttClient = mqtt.connect(broker)
 mqttClient.on('connect', onConnect)
 mqttClient.on('message', onMessage)
-
-const server = http.createServer(app)
-server.listen(port, () => console.log(`Listening on port ${port}`))

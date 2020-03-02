@@ -2,12 +2,12 @@ const mqtt = require('mqtt')
 const { broker, topic } = require('./config')
 
 const onConnect = () => {
-  console.log('connected')
+  console.log(`Connected to broker ${broker}`)
   mqttClient.subscribe(topic)
 }
 
 const onMessage = (topic, message) => {
-  console.log('Topic: ', topic)
+  console.log(`New message received on topic ${topic}!`);
   console.log('Message: ', message.toString())
 } 
 

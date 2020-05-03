@@ -7,7 +7,7 @@ const onConnect = () => {
 }
 
 const onMessage = (topic, message) => {
-  console.log(`New message received on topic ${topic}!`);
+  console.log(`New message received on topic ${topic}!`)
   console.log('Message: ', message.toString())
 } 
 

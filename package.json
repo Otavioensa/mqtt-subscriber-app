@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Otavioensa/mqtt-pub-client-server#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "mqtt": "^3.0.0"
   }
 }

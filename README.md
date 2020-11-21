@@ -1,2 +1,2 @@
-# mqtt-sub-client-server
-Client subscriber application that will listen to a MQTT broker and log incoming data
+# mqtt-sub-app
+Subscriber application that listens to a MQTT broker and logs incoming data

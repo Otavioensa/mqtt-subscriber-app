@@ -1,17 +1,20 @@
 require('dotenv').config()
 const mqtt = require('mqtt')
-const { broker, topic, username, password, qos } = require('./config')
+const { broker, topic, qos } = require('./config')
 
-const onConnect = () => {
-  console.log(`Connected to broker ${broker} and topic ${topic}`)
-  mqttClient.subscribe(topic, { qos: Number(qos) })
-}
+let mqttClient
 
 const onMessage = (topic, message) => {
   console.log(`New message received on topic ${topic}!`)
   console.log('Message: ', message.toString())
 } 
 
-const mqttClient = mqtt.connect(broker, { username, password, })
-mqttClient.on('connect', onConnect)
-mqttClient.on('message', onMessage)
+
+async function start() {
+  mqttClient = await mqtt.connectAsync(broker)
+  console.log(`Connected to broker ${broker} and topic ${topic}`)
+  await mqttClient.subscribeAsync(topic, { qos: Number(qos) })
+  mqttClient.on('message', onMessage)
+}
+
+start()
